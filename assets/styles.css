@@ -1,0 +1,67 @@
+:root {
+  font-size: 1rem;
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  --background: #15193c;
+  --text: #333333;
+  --quiz-card: #f5f5f5;
+  --button: #4caf50;
+  --button-hover: #45a049;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle, #1d3050 0%, #15193c 100%);
+  color: white;
+  border: 1px solid red;
+}
+
+.overallContainer {
+  max-width: 50%;
+  margin: 3em auto;
+  border: 1px solid green;
+}
+
+/* Styling of the header section */
+
+.header {
+  border: 2px solid hsl(213, 19%, 44%);
+  border-radius: 0.625rem;
+  padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4em;
+}
+
+.gameHeader {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.scoreContainer {
+  background: white;
+  padding: 1em 2em;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.scoreHeader {
+  color: hsl(234, 37%, 62%);
+  letter-spacing: 1px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.score {
+  color: hsl(248, 11%, 36%);
+  font-size: 3rem;
+  font-weight: 800;
+}

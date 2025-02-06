@@ -13,55 +13,61 @@
     <link rel="stylesheet" href="./assets/styles.css" />
   </head>
   <body>
-    <section class="headerSection">
-      <div class="header">
-        <h1>ROCK PAPER SCISSORS</h1>
-        <div class="scoreContainer">
-          <p class="scoreHeader">SCORE</p>
-          <p class="score"></p>
+    <div class="overallContainer">
+      <section class="headerSection">
+        <div class="header">
+          <h1 class="gameHeader">
+            ROCK <br />
+            PAPER <br />
+            SCISSORS
+          </h1>
+          <div class="scoreContainer">
+            <p class="scoreHeader">SCORE</p>
+            <p class="score"></p>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="gameSection">
-      <div class="gameContainer">
-        <div class="choiceContainer">
-          <button class="choice paper" data-choice="paper">
-            <img src="./assets/images/icon-paper.svg" alt="Paper" />
-          </button>
-          <button class="choice scissors" data-choice="scissors">
-            <img src="./assets/images/icon-scissors.svg" alt="Scissors" />
-          </button>
-          <button class="choice rock" data-choice="rock">
-            <img src="./assets/images/icon-rock.svg" alt="Rock" />
-          </button>
-        </div>
+      </section>
+      <section class="gameSection">
+        <div class="gameContainer">
+          <div class="choiceContainer">
+            <button class="choice paper" data-choice="paper">
+              <img src="./assets/images/icon-paper.svg" alt="Paper" />
+            </button>
+            <button class="choice scissors" data-choice="scissors">
+              <img src="./assets/images/icon-scissors.svg" alt="Scissors" />
+            </button>
+            <button class="choice rock" data-choice="rock">
+              <img src="./assets/images/icon-rock.svg" alt="Rock" />
+            </button>
+          </div>
 
-        <div class="matchContainer">
-          <div class="playerSelection">
-            <div>
-              <h2>YOU PICKED</h2>
+          <div class="matchContainer">
+            <div class="playerSelection">
+              <div>
+                <h2>YOU PICKED</h2>
+              </div>
+              <div class="chosenOption"></div>
             </div>
-            <div class="chosenOption"></div>
-          </div>
-          <div class="outcomeContainer">
-            <div>
-              <h2 class="outcomeText"></h2>
+            <div class="outcomeContainer">
+              <div>
+                <h2 class="outcomeText"></h2>
+              </div>
+              <button class="retryButton">PLAY AGAIN</button>
             </div>
-            <button class="retryButton">PLAY AGAIN</button>
-          </div>
-          <div class="opponentSelection">
-            <div>
-              <h2>THE HOUSE PICKED</h2>
-            </div>
-            <div class="opponentChoice">
-              <div class="waitingCircle"></div>
+            <div class="opponentSelection">
+              <div>
+                <h2>THE HOUSE PICKED</h2>
+              </div>
+              <div class="opponentChoice">
+                <div class="waitingCircle"></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <button class="rulesBtn">RULES</button>
+      <button class="rulesBtn">RULES</button>
+    </div>
     <script src="gameFunc.js"></script>
   </body>
 </html>

@@ -36,9 +36,7 @@ function createChoice(choice) {
   button.dataset.choice = choice;
 
   const img = document.createElement("img");
-  img.src = `./assets/images/icon-paper.svg`;
-  img.src = `./assets/images/icon-scissors.svg`;
-  img.src = `./assets/images/icon-rock.svg`;
+  img.src = `./assets/images/icon-${choice}.svg`;
 
   button.appendChild(img);
   return button;

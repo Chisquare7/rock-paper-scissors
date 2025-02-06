@@ -30,23 +30,28 @@
       <section class="gameSection">
         <div class="gameContainer">
           <div class="choiceContainer">
+            <div class="triangleBg">
+              <img src="./assets/images/bg-triangle.svg" alt="" />
+            </div>
             <button class="choice paper" data-choice="paper">
               <img src="./assets/images/icon-paper.svg" alt="Paper" />
             </button>
-            <button class="choice scissors" data-choice="scissors">
-              <img src="./assets/images/icon-scissors.svg" alt="Scissors" />
-            </button>
             <button class="choice rock" data-choice="rock">
               <img src="./assets/images/icon-rock.svg" alt="Rock" />
+            </button>
+            <button class="choice scissors" data-choice="scissors">
+              <img src="./assets/images/icon-scissors.svg" alt="Scissors" />
             </button>
           </div>
 
           <div class="matchContainer">
             <div class="playerSelection">
-              <div>
+              <div class="pickHead">
                 <h2>YOU PICKED</h2>
               </div>
-              <div class="chosenOption"></div>
+              <div class="playerChose">
+                <div class="chosenOption"></div>
+              </div>
             </div>
             <div class="outcomeContainer">
               <div>
@@ -55,7 +60,7 @@
               <button class="retryButton">PLAY AGAIN</button>
             </div>
             <div class="opponentSelection">
-              <div>
+              <div class="pickHead">
                 <h2>THE HOUSE PICKED</h2>
               </div>
               <div class="opponentChoice">
@@ -65,7 +70,9 @@
           </div>
         </div>
       </section>
+    </div>
 
+    <div class="ruleBtn">
       <button class="rulesBtn">RULES</button>
     </div>
     <script src="gameFunc.js"></script>

@@ -1,12 +1,7 @@
 :root {
   font-size: 1rem;
-  font-family: "Open Sans", serif;
+  font-family: Arial, sans-serif;
   font-optical-sizing: auto;
-  --background: #15193c;
-  --text: #333333;
-  --quiz-card: #f5f5f5;
-  --button: #4caf50;
-  --button-hover: #45a049;
 }
 
 * {
@@ -19,13 +14,11 @@ body {
   min-height: 100vh;
   background: radial-gradient(circle, #1d3050 0%, #15193c 100%);
   color: white;
-  border: 1px solid red;
 }
 
 .overallContainer {
   max-width: 50%;
   margin: 3em auto;
-  border: 1px solid green;
 }
 
 /* Styling of the header section */
@@ -37,7 +30,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 4em;
+  margin-bottom: 5em;
 }
 
 .gameHeader {
@@ -64,4 +57,295 @@ body {
   color: hsl(248, 11%, 36%);
   font-size: 3rem;
   font-weight: 800;
+}
+
+/* Styling of the game section */
+
+.choiceContainer {
+  position: relative;
+  width: 500px;
+  height: 250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.triangleBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.triangleBg img {
+  width: 40%;
+  height: auto;
+}
+
+.paper {
+  position: absolute;
+  top: -70px;
+  left: 50px;
+  transform: translateX(-50%);
+}
+
+.rock {
+  position: absolute;
+  bottom: -50px;
+  left: 50px;
+  transform: translateX(-50%);
+}
+
+.scissors {
+  position: absolute;
+  top: -70px;
+  right: 50px;
+  transform: translateX(50%);
+}
+
+.choice {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+  background: radial-gradient(circle, white 50%, transparent 51%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 8px 12px -5px #babed5;
+}
+
+.choice img {
+  position: relative;
+  z-index: 2;
+  width: 25%;
+  height: 25%;
+}
+
+.choice::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.rock::before {
+  background: radial-gradient(circle, white 50%, #df405e 52%);
+  box-shadow: 0 12px 18px -5px #9f1636;
+}
+
+.scissors::before {
+  background: radial-gradient(circle, white 50%, #eba729 52%);
+  box-shadow: 0 12px 18px -5px #c76c1d;
+}
+
+.paper::before {
+  background: radial-gradient(circle, white 50%, #5671f6 52%);
+  box-shadow: 0 12px 18px -5px #2945c3;
+}
+
+.matchContainer {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.playerSelection,
+.opponentSelection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7em;
+}
+
+.playerChose,
+.opponentChoice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outcomeContainer {
+  text-align: center;
+}
+
+.outcomeText {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.retryButton {
+  background: white;
+  color: hsl(349, 50%, 52%);
+  border: none;
+  padding: 0.8em 2.5em;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.rulesBtn {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  background: transparent;
+  color: white;
+  border: 2px solid hsl(213, 19%, 44%);
+  padding: 0.8em 2.5em;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 768px) {
+  .overallContainer {
+    max-width: 85%;
+  }
+
+  .choiceContainer {
+    width: 300px;
+    height: 250px;
+  }
+
+  .choice {
+    width: 150px;
+    height: 150px;
+  }
+
+  .triangleBg {
+    width: 150%;
+    height: 150%;
+  }
+
+  .triangleBg img {
+    width: 50%;
+  }
+
+  .paper {
+    top: -80px;
+    left: 20px;
+  }
+
+  .rock {
+    bottom: -70px;
+    left: 40px;
+  }
+
+  .scissors {
+    top: -80px;
+    right: 20px;
+  }
+
+  .matchContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 2rem;
+  }
+
+  .outcomeContainer {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .choice {
+    width: 70px;
+    height: 70px;
+  }
+
+  .waitingCircle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .pickHead h2 {
+    font-size: 0.8rem;
+    margin-bottom: 1em;
+  }
+
+  .outcomeText {
+    font-size: 2rem;
+  }
+
+  .rulesBtn {
+    position: static;
+    margin-top: 2em;
+  }
+
+  .ruleBtn {
+    text-align: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .overallContainer {
+    max-width: 90%;
+  }
+
+  .choiceContainer {
+    width: 250px;
+    height: 250px;
+  }
+
+  .choice {
+    width: 90px;
+    height: 90px;
+  }
+
+  .matchContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 2rem;
+  }
+
+  .triangleBg {
+    width: 150%;
+    height: 150%;
+  }
+
+  .retryButton {
+    padding: 0.5em 0.5em;
+    font-size: 1rem;
+  }
+
+  .pickHead h2 {
+    font-size: 0.5rem;
+  }
+
+  .ruleBtn {
+    margin-bottom: 3em;
+  }
 }

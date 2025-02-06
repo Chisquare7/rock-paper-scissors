@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <section class="headerSection">
+      <div class="header">
+        <h1>ROCK PAPER SCISSORS</h1>
+        <div class="scoreContainer">
+          <p class="scoreHeader">SCORE</p>
+          <p class="score"></p>
+        </div>
+      </div>
+    </section>
+    <section class="gameSection">
+      <div class="gameContainer">
+        <div class="choiceContainer">
+          <button class="choice rock" data-choice="rock">
+            <img src="" alt="Rock" />
+          </button>
+          <button class="choice paper" data-choice="paper">
+            <img src="" alt="Paper" />
+          </button>
+          <button class="choice scissors" data-choice="scissors">
+            <img src="" alt="Scissors" />
+          </button>
+        </div>
+        <div class="matchContainer">
+          <div class="playerSelection">
+            <div>
+              <h2>YOU PICKED</h2>
+            </div>
+            <div class="chosenOption"></div>
+          </div>
+          <div class="outcomeContainer">
+            <div>
+              <h2 class="outcomeText"></h2>
+            </div>
+            <button class="retryButton">PLAY AGAIN</button>
+          </div>
+          <div class="opponentSelection">
+            <div>
+              <h2>THE HOUSE PICKED</h2>
+            </div>
+            <div class="opponentChoice">
+              <div class="waitingCircle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <button class="rulesBtn">RULES</button>
+    <script src="gameFunc.js"></script>
+  </body>
+</html>

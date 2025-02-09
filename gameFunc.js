@@ -30,16 +30,16 @@ function determineWinner(playerChoice, systemChoice) {
 // 2. Logic to create a choice button element
 
 function createChoice(choice) {
-  const button = document.createElement("button");
+  const selectDiv = document.createElement("div");
 
-  button.className = `choice ${choice}`;
-  button.dataset.choice = choice;
+  selectDiv.className = `choice ${choice}`;
+  selectDiv.dataset.choice = choice;
 
   const img = document.createElement("img");
-  img.src = `./assets/images/icon-${choice}.svg`;
+  img.src = `./assets/images/${choice}.png`;
 
-  button.appendChild(img);
-  return button;
+  selectDiv.appendChild(img);
+  return selectDiv;
 }
 
 // 3. Logic to handle player and system choice
